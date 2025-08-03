@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Matching Games - Multiple Games</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
+  }
+  h1 { margin-bottom: 20px; }
+  .game-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 30px;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    width: 300px;
+    text-align: left;
+  }
+  li {
+    background-color: #eee;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s;
+  }
+  li.selected {
+    background-color: #add8e6;
+  }
+  li.correct {
+    background-color: #90ee90;
+    cursor: default;
+    text-decoration: line-through;
+  }
+  li.incorrect {
+    background-color: #f08080;
+    cursor: default;
+    text-decoration: line-through;
+  }
+  #feedback {
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+  #final-result {
+    font-weight: bold;
+    font-size: 22px;
+    margin-top: 25px;
+    color: green;
+  }
+</style>
+</head>
+<body>
+  <h1>Matching Games</h1>
+  
+  <div id="game1" class="game">
+    <h2>Match the verbs and nouns</h2>
+    <div class="game-container">
+      <ul id="left-column-1"></ul>
+      <ul id="right-column-1"></ul>
+    </div>
+  </div>
+  
+  <div id="game2" class="game" style="display:none;">
+    <h2>Match the vocabulary with definitions</h2>
+    <div class="game-container">
+      <ul id="left-column-2"></ul>
+      <ul id="right-column-2"></ul>
+    </div>
+  </div>
+
+  <div id="game3" class="game" style="display:none;">
+    <h2>Check your writing and match EMAIL parts</h2>
+    <div class="game-container">
+      <ul id="left-column-3"></ul>
+      <ul id="right-column-3"></ul>
+    </div>
+  </div>
+
+  <div id="game4" class="game" style="display:none;">
+    <h2>Words with similar meaning</h2>
+    <div class="game-container">
+      <ul id="left-column-4"></ul>
+      <ul id="right-column-4"></ul>
+    </div>
+  </div>
+  
+  <p id="feedback"></p>
+  <p id="final-result"></p>
+
+  <script src="script.js"></script>
+</body>
+</html>
